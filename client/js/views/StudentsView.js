@@ -9,7 +9,7 @@ var StudentsView = Backbone.View.extend({
 
   render: function() {
     var prepareToAppend = this.collection.models.map(function(model){
-       return model.render();
+       return new StudentEntryView({model: Student}).render(model);
     }.bind(this))
 
     this.$el.html(prepareToAppend.join(''));

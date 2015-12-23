@@ -44,6 +44,7 @@ var AppView = Backbone.View.extend({
       this.renderCohort(urlFragment);
     }.bind(this));
 
+    this.renderLanding();
   },
 
   renderCohort: function(fragment) {

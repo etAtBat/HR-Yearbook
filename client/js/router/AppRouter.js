@@ -14,7 +14,6 @@ var AppRouter = Backbone.Router.extend({
   ///TODO: what are the below functions even for???///
   landing: function() {
     //things to do at /api/
-    console.log('landing')
   },
 
   students: function(){
