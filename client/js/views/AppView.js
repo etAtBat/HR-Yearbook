@@ -8,11 +8,15 @@ var AppView = Backbone.View.extend({
       console.log('Hit landing Route')
     }.bind(this));
 
-    console.log('appview init options', options)
-
     options.router.on('route:cohortHandler', function(data) {
       console.log('Hit cohort id route:', data)
       var urlFragment = "students?cohort=" + data;
+      this.renderCohort(urlFragment);
+    }.bind(this));
+
+    options.router.on('route:studentHandler', function(data) {
+      console.log('Hit cohort route for all students')
+      var urlFragment = "students";
       this.renderCohort(urlFragment);
     }.bind(this));
 
@@ -40,12 +44,10 @@ var AppView = Backbone.View.extend({
       this.renderCohort(urlFragment);
     }.bind(this));
 
-    // this.renderLanding()
-    // this.renderCohort();
   },
 
   renderCohort: function(fragment) {
-    var newCohort = new Students({model: Students, info: fragment});
+    var newCohort = new Students({model: Student, info: fragment});
   },
 
   renderLanding: function() {

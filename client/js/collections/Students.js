@@ -13,7 +13,8 @@ var Students = Backbone.Collection.extend({
     this.fetch({
       success: function(data){
         console.log('successful fetch, ', data);
-      },
+        var test = new StudentsView({collection: this});
+      }.bind(this),
       error: function(err){
         console.log('error, ', err);
       }

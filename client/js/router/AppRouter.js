@@ -4,6 +4,7 @@ var AppRouter = Backbone.Router.extend({
   routes: {
     '':                                     'landing',
     'cohort/:id':                     'cohortHandler',
+    'students/':                     'studentHandler',
     'students/name=:name':       'studentNameHandler',
     'students/id=:id':             'studentIDHandler',
     'students/cohort=:cohort': 'studentCohortHandler',
