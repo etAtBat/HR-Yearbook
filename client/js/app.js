@@ -3,5 +3,6 @@ var app = new AppView({
   navbar: new NavBarView(),
 });
 
+
 // http://backbonejs.org/#History
 Backbone.history.start()
