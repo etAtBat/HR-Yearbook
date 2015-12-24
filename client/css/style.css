@@ -6,8 +6,9 @@ body {
   padding: 0;
 }
 #app-container {
-  width: 100%;
+  min-width: 380px;
   height: 100%;
+
 }
 #page-content-container {
   margin-top: 70px;
@@ -117,5 +118,51 @@ body {
   margin-left: 100px;
   float: left;
   clear: both;
+}
+
+
+.pictureHolder {
+  float: left;
+  height: 345px;
+}
+
+.hrlogo {
+  height: 100px;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 10000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+.name, .cohort , .nickname {
+  padding: 0 25 0 25;
+}
+
+.picture {
+  margin-left: 10px;
+  height: 200px;
+  /*-webkit-animation-duration: 5000ms;*/
+}
+.navbar {
+  display: inline;
+}
+
+.nickname {
+  display:none;
+}
+
+.anchors{
+  padding: 0 15 0 15;
+  text-decoration: none;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform:rotate(0deg);
+  }
+
+  to {
+    -webkit-transform:rotate(360deg);
+  }
 }
 

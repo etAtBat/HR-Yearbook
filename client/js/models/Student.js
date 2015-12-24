@@ -1,5 +1,5 @@
 var Student = Backbone.Model.extend({
-  
+
   defaults: {
     id: 0,
     name: '',
@@ -8,7 +8,11 @@ var Student = Backbone.Model.extend({
     first: '',
     last: '',
     nickname: ''
-  }
+  },
 
+  initialize: function(){
+    this.set('nickname', generateNickname())
+  }
+  
 });
 

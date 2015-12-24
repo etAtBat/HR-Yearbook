@@ -1,9 +1,9 @@
 var LandingView = Backbone.View.extend({
   initialize: function() {
-    //this.render(); render already being called from AppView
+    this.render();
   },
 
-  template: _.template('<div><h1>HR YEARBOOK</h1></div>'),
+  template: _.template('<h1>Don\'t call us. We\'ll callback you!</h1>'),
 
   render: function() {
     return this.template();
